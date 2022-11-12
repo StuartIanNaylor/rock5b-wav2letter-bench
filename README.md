@@ -59,5 +59,7 @@ CpuAcc is Neon optimised, GpuAcc is Mali Optimised and CpuRef is just a single t
 
 All based on the excelent tutorial @ https://developer.arm.com/documentation/102603/2108 with some slight changes
 
+PS if you get errors with Opencl and the Mali then https://github.com/JeffyCN/rockchip_mirrors/blob/libmali/firmware/g610/mali_csffw.bin doesn't get installed to /lib/firmware and I had preinstalled, but not all that sure if even used. I presume libmali-valhall-g610-g6p0-x11 package does though.
+
 
 
