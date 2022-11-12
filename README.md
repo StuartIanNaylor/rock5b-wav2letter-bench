@@ -61,5 +61,8 @@ All based on the excelent tutorial @ https://developer.arm.com/documentation/102
 
 PS if you get errors with Opencl and the Mali then https://github.com/JeffyCN/rockchip_mirrors/blob/libmali/firmware/g610/mali_csffw.bin doesn't get installed to /lib/firmware and I had preinstalled, but not all that sure if even used. I presume libmali-valhall-g610-g6p0-x11 package does though.
 
+Whay you can do is 'sudo apt-get install stress-ng' and add this line 
+`os.system('stress-ng -c 8 -t 20s&')` just before the inference starts to simulate gpu and cpu stress and total power usage.
+https://github.com/StuartIanNaylor/rock5b-wav2letter-bench/blob/2c5bef2dea28ceebad7e0eaa4dbd4cd1c022367c/preload_mfcc_run_audio_file.py#L117
 
 
