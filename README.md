@@ -46,5 +46,15 @@ What you can do is run on the GPU GpuAcc and choose one of the much bigger sampl
 `python3 run_audio_file.py --audio_file_path samples/gb0.wav --model_file_path tflite_int8/wav2letter_int8.tflite --preferred_backends GpuAcc CpuRef`
 But the original run_audio_file.py uses a pretty horrendous python based MFCC routine for each audio chunk which makes it impossible to differentiate Cpu load vs GPU
 
+```
+cp ~/rock5b-wav2letter-bench/preload_mfcc_run_audio_file.py .
+pip3 install psutil
+python3 preload_mfcc_run_audio_file.py --audio_file_path samples/gb0.wav --model_file_path tflite_int8/wav2letter_int8.tflite --preferred_backends GpuAcc CpuRef
+```
+The audio will take time to load and pause on `Processing Audio Frames...`
+To change back to CpuAcc simply change
+`python3 preload_mfcc_run_audio_file.py --audio_file_path samples/gb0.wav --model_file_path tflite_int8/wav2letter_int8.tflite --preferred_backends CpuAcc CpuRef`
+CpuAcc is Neon optimised, GpuAcc is Mali Optimised and CpuRef is just a single thread simple cpu fallback
+
 
 
