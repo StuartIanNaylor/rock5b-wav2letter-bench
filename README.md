@@ -56,5 +56,7 @@ To change back to CpuAcc simply change
 `python3 preload_mfcc_run_audio_file.py --audio_file_path samples/gb0.wav --model_file_path tflite_int8/wav2letter_int8.tflite --preferred_backends CpuAcc CpuRef`
 CpuAcc is Neon optimised, GpuAcc is Mali Optimised and CpuRef is just a single thread simple cpu fallback
 
+All based on the excelent tutorial @ https://developer.arm.com/documentation/102603/2108 with some slight changes
+
 
 
