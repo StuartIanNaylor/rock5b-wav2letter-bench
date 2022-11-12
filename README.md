@@ -1,5 +1,6 @@
 # rock5b-wav2letter-bench
-rock5b running armnn wav2letter GpuAcc &amp; CpuAcc exaples
+rock5b running armnn wav2letter GpuAcc &amp; CpuAcc examples
+Run on Ubuntu 22.04
 ```
 sudo apt update 
 sudo apt upgrade
