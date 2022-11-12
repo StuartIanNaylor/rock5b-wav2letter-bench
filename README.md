@@ -42,9 +42,9 @@ rm samples/mm1.wav
 
 python3 run_audio_file.py --audio_file_path tests/testdata/quick_brown_fox_16000khz.wav --model_file_path tflite_int8/wav2letter_int8.tflite --preferred_backends CpuAcc CpuRef
 ```
+What you can do is run on the GPU GpuAcc and choose one of the much bigger samples
+`python3 run_audio_file.py --audio_file_path samples/gb0.wav --model_file_path tflite_int8/wav2letter_int8.tflite --preferred_backends GpuAcc CpuRef`
+But the original run_audio_file.py uses a pretty horrendous python based MFCC routine for each audio chunk which makes it impossible to differentiate Cpu load vs GPU
 
 
-
-
-```
 
